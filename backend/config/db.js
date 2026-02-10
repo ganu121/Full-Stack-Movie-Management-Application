@@ -2,10 +2,12 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb+srv://gmalji121_db_user:admin@backenddb.bv9b97r.mongodb.net/?appName=backendDB");
+    console.log("Mongo URI:", process.env.MONGODB_URI);
+
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("MongoDB connected");
   } catch (error) {
-    console.error(error.message);
+    console.error("MongoDB connection failed:", error.message);
     process.exit(1);
   }
 };
