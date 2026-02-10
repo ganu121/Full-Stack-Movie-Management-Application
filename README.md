@@ -112,5 +112,11 @@ movie-app/
 
 `https://github.com/ganu121/Full-Stack-Movie-Management-Application.git`
 
+**Backend**
+![Demo Screenshot](images\backend.png)
+
+**Frontend**
+![Demo Screenshot](images\frontend.png)
+
 ## Author
 Ganesh Malji
