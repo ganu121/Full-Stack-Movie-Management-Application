@@ -24,16 +24,20 @@ cd backend
 npm install
 ```
 
-Update the MongoDB connection string in:
-`backend/config/db.js`
+Create a `.env` file inside the `backend` folder and add your MongoDB connection string.
 
-Example:
-```js
-mongoose.connect("mongodb://127.0.0.1:27017/movies_db");
+Example `backend/.env`:
 ```
+MONGODB_URI=mongodb://127.0.0.1:27017/movies_db
+# Optional: PORT=5000
+```
+
+The backend loads environment variables with `dotenv` and reads the connection string from `process.env.MONGODB_URI` in `backend/config/db.js`.
 
 Start the server:
 ```bash
+cd backend
+npm install
 npm run dev
 ```
 API runs at: `http://localhost:5000`
